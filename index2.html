@@ -1,4 +1,3 @@
-
 <!doctype html>
 <head>
   <meta charset="utf-8">
@@ -7,10 +6,34 @@
   <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
    <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+
+
 </head>
 
 <body>
+
+<div id="overlay"></div>
+	
+
+	<div id="my-modal">
+		<span id="modal-close">X</span>
+		<div class="clear"></div>
+		<h1>I'll let you know when I start the project!</h1>
+		<div id="signup">
+			
+			
+			 <form action="http://patagonaproperties.us11.list-manage1.com/subscribe/post" method="POST">
+<input type="hidden" name="u" value="5494ccb07f6caef9b662f81b1">
+<input type="hidden" name="id" value="9775a8f8aa">
+
+			<input type="email"  name="MERGE0" />
+			<input type="submit" name="submit" value="Sign Up" />
+		</div>
+	</div>
 
   <div class="content">
    
@@ -27,10 +50,35 @@
       or having a deep conversation with my freaking awesome husband.
       <br> 
       <br>
-      New Project Coming Soon: <a href="http://mollyabbott.com/52in52/" target="_blank" >52 Websites in 52 Weeks</p>
+      New Project Coming Soon: <span id="project"> <a href= "/52in52" > Websites in 52 Weeks </a></span> </p>
    <a href="https://www.instagram.com/mollyabbott15/" target="_blank" class= "sprite" > <div class="sprite"> </div> </a> 
+   
  </div>
  
+
+
+
+     <script>
+
+$(document).ready(function() {
+
+$('#my-modal, #overlay').hide();
+
+$('#project').click(function() {
+
+	$('#my-modal').animate({
+	top:'100px'
+	},1000);
+
+	
+	$('#modal-close').click(function() {
+		$('#my-modal').animate({
+		top: '-190px'
+		},1000, function () {
+		$('#overlay').fadeOut();
+	});
+});
+</script>
  
 </body>
 </html>
